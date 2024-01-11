@@ -10,7 +10,7 @@
     <p>작성자: [[${article.writer}]]</p>
     <textarea rows="5" cols="60" th:text="${article.content}" readonly></textarea><br>
     <a th:href="@{/article/{id}/update(id=${article.id})}">수정</a>&nbsp;&nbsp;&nbsp;
-    <a th:href="@{/article/{id}/delete(id=${article.id})}">삭제</button><br>
+    <a th:href="@{/article/{id}/delete(id=${article.id})}">삭제</a><br>
     <hr>
         <!-- 댓글 zone -->
         <h3>댓글</h3>

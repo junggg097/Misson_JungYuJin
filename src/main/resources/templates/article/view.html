@@ -18,10 +18,9 @@
     <h3>댓글</h3>
     <div th:each="comment : ${article.comments}">
         작성자: [[${comment.writer}]]<br>
-        <label>
             내용 :
             <textarea rows="5" cols="40" th:text="${comment.content}"></textarea>
-        </label><br>
+        <br>
         <a th:href="@{/article/{articleId}/comment/{commentId}/delete(articleId=${article.id}, commentId=${comment.id})}">삭제</a>
         <hr>
     </div>
