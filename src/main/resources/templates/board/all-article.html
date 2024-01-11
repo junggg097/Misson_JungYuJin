@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>전체 게시글</title>
+</head>
+<body>
+<h1>전체 게시글</h1>
+<hr>
+<ul>
+    <div th:each="article: ${articles}">
+        <li><a th:href="@{/boards/entire/{id}(id=${article.id})}">[[${article.title}]]</a></li>
+    </div>
+</ul>
+<hr>
+<a th:href="@{/article/create(board=0)}">게시글 작성</a>&nbsp;&nbsp;&nbsp;
+<a href="/boards/">게시판 LIST</a>
+</body>
+</html>
